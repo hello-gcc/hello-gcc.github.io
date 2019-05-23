@@ -4,7 +4,7 @@
 
 # Site
 title: 文蕙俊
-subtitle: 为人夫 为人父 责任
+subtitle: 为人夫 为人父
 description:
 keywords:
 author: Jones Kong
@@ -15,7 +15,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://kangjun.online
 root: /
-permalink: :categories/:title/
+permalink: :category/:title.html
 permalink_defaults:
 
 # Directory
@@ -54,8 +54,8 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: uncategorized
-category_map:
+default_category: technology
+category_map: 
 tag_map:
 
 # Date / Time format
