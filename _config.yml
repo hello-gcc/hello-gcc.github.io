@@ -15,7 +15,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://kangjun.online
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :categories/:title/
 permalink_defaults:
 
 # Directory
@@ -80,4 +80,4 @@ theme: maupassant
 deploy:
   type: git
   repo: git@github.com:hello-gcc/hello-gcc.github.io.git
-  branch: gh-pages
+  branch: master
