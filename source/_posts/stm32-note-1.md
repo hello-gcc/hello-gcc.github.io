@@ -1,11 +1,14 @@
 ---
 title: STM32学习笔记 之 序言
 categories:
-- technology
+- 技术
 toc: true
 date: 2019-05-24 22:05:37
 tags: STM32
 ---
+
+技术是不断更新的，但是经验是一点一滴积累的。经历多并不代表经验深厚，需要总结、积累、分享，能力才可以得到质的提升。
+<!-- more -->
 
 ### 履历
 从事嵌入式软件开发工作接近三年了，但是对于STM32的接触是从最近一份工作开始的。大概用了半年时间阅读项目中的源代码，并且将项目中的HAL编写的代码转换成寄存器版本的代码，算是对STM32简单的入门了解。
@@ -20,9 +23,9 @@ tags: STM32
 近日，计划更加系统地学习一下STM32，一方面加深STM32的知识，另一方面从整体框架的视角上更加全面地对STM32有一个系统的认知。
 
 ### 规划
-- （1）选择Cotex-M3和Cotex-M4两种架构的STM32芯片两种STM32F103ZET6和STM32F407ZGT6
-- （2）STM32官方开发软件Keil的使用
-- （3）STM32时钟分频
-- （4）STM32通信I2C、SPI、486、CAN、UART
-- （5）STM32 DAC/ADC采样
-- （6）STM32 RTOS移植
+-  选择Cotex-M3和Cotex-M4两种架构的STM32芯片两种STM32F103ZET6和STM32F407ZGT6
+-  STM32官方开发软件Keil的使用
+-  STM32时钟分频
+-  STM32通信I2C、SPI、486、CAN、UART
+-  STM32 DAC/ADC采样
+-  STM32 RTOS移植

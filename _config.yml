@@ -55,7 +55,8 @@ index_generator:
   
 # Category & Tag
 default_category: technology
-category_map: 
+category_map:
+        技术: technology
 tag_map:
 
 # Date / Time format
@@ -74,6 +75,15 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: maupassant
+#RSS订阅
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+type: atom
+path: atom.xml
+limit: 20
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
