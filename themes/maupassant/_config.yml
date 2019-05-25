@@ -78,6 +78,7 @@ menu:
     icon: fa-rss
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
+  - music 
   - search
   - category
   - tag
@@ -92,6 +93,14 @@ links:
     url: http://www.example2.com/
   - title: site-name3
     url: http://www.example3.com/
+
+music:
+  - title: 
+    url: http://music.163.com/outchain/player?
+    type: 2
+    id: 133998
+    auto: 1
+    height: 66
 
 timeline:
   - num: 3
