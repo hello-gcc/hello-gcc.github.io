@@ -10,12 +10,12 @@ gitment:
   client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
   client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
 gitalk:
-  enable: false ## If you want to use Gitment comment system please set the value to true.
-  owner:  ## Your GitHub ID, e.g. username
-  repo:  ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
-  client_id:  ## GitHub client ID, e.g. 75752dafe7907a897619
-  client_secret:  ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
-  admin:  ## Github repo owner and collaborators, only these guys can initialize github issues.
+  enable: true ## If you want to use Gitment comment system please set the value to true.
+  owner: hello-gcc  ## Your GitHub ID, e.g. username
+  repo: hello-gcc.github.io ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
+  client_id: 1cfa828bea668ef3119b ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret: dfcb8918ff85f8526fbad1523ccf8d58ce11dbca ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
+  admin: hello-gcc ## Github repo owner and collaborators, only these guys can initialize github issues.
 valine: ## https://valine.js.org
   enable: false ## If you want to use Valine comment system, please set the value to true.
   appid: ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
