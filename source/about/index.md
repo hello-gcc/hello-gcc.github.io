@@ -1,6 +1,7 @@
 ---
 title: 关于我
 toc: true
+comments: false
 ---
 
 ## 近况
