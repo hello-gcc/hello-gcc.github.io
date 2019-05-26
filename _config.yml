@@ -87,6 +87,9 @@ limit: 20
 sitemap: 
     path: sitemap.xml
 
+aplayer:
+  meting: true
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
