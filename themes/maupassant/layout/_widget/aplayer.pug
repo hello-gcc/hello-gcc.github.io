@@ -2,7 +2,8 @@
   //- .widget-title
     //- i(class='fa fa-music')= ' ' + __('music')
   link(rel="stylesheet", type='text/css', href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css")
-  script(type='text/javascript', src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  //- script(type='text/javascript', src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  script(type='text/javascript', src=url_for(theme.js)+"/Aplayer.min.js")
   script(type='text/javascript', src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js")
   
   div(class="aplayer", data-id="2578068117" ,data-server="netease" ,data-type="playlist" ,data-listmaxheight="98px",data-theme="#FF4081")
