@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kangjun.online/"/>
-  <updated>2019-05-25T12:24:38.608Z</updated>
+  <updated>2019-05-27T15:14:50.471Z</updated>
   <id>https://kangjun.online/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo主题Maupassant侧边栏增加音乐Aplayer</title>
+    <link href="https://kangjun.online/technology/hexo-widget-music.html"/>
+    <id>https://kangjun.online/technology/hexo-widget-music.html</id>
+    <published>2019-05-27T14:20:08.000Z</published>
+    <updated>2019-05-27T15:14:50.471Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>在Hexo的Maupassant主题下，为了使博客的功能更加完善，增加音乐播放模块，看了Maupassant主题作者的ISSU，发现并没有该功能的实现，不过从部分网友的折腾过程来看，使用Aplayer实现的效果是最好的。<br><a id="more"></a></p><h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>网上查找了许多Hexo增加音乐播放的文章，大部分是在博客文章中添加音乐播放功能，而且接口封装非常便捷。自己就思考，可不可以将播放功能增加到侧边栏。</p><h3 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h3><p>主流的方案有以下几种：</p><ol><li>通过网易云的外链生成iframe代码或者flash代码，插入个人需要将音乐模块放置的地方</li><li>通过Aplayer插入播放音乐功能</li><li>通过Hexo-tag-aplayer引入Aplayer</li><li>通过Aplayer和MetingJS接口，将class为aplayer的div插入相应的位置</li></ol><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><ol><li>方案一（网易云外链代码插入）<ul><li>优点：方便快捷，直接通过因为就可以生成代码</li><li>缺点：有版权的歌曲无法无法播放，尺寸有限制</li></ul></li><li>方案二（Aplayer插入）<ul><li>优点：界面美观，尺寸自适应</li><li>缺点：需要配置音乐的url，比较麻烦</li></ul></li><li>方案三（Hexo-tag-aplayer引入Aplayer）<ul><li>优点：非常便捷，直接根据id或者list id就可以播放</li><li>缺点：目前只能在文章中引用</li></ul></li><li>方案四（MetingJS和Aplayer结合使用）<ul><li>优点：可以音乐播放添加到任何位置，自适应，根据音乐id或列表list id就可以播放音乐</li><li>缺点：需要更改主题脚本文件</li></ul></li></ol><h3 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h3><p>由于个人的需求是侧边栏实现音乐播放功能，通过上述的对比，最终现在方案四，具体的修改方法如下：</p><ul><li><p>在Maupassant主题路径增加文件<br>themes/maupassant/layout/_widget/aplayer.pug ，文件内容如下</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.widget</span><br><span class="line">  link(rel=<span class="string">"stylesheet"</span>, type=<span class="string">'text/css'</span>, href=<span class="string">"https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"</span>)</span><br><span class="line">  script(type=<span class="string">'text/javascript'</span>, src=<span class="string">"https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"</span>)</span><br><span class="line">  script(type=<span class="string">'text/javascript'</span>, src=<span class="string">"https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"</span>)</span><br><span class="line">  </span><br><span class="line">  div(<span class="class"><span class="keyword">class</span></span>=<span class="string">"aplayer"</span>, data-id=<span class="string">"2578068117"</span> ,data-server=<span class="string">"netease"</span> ,data-type=<span class="string">"playlist"</span> ,data-listmaxheight=<span class="string">"98px"</span>,data-theme=<span class="string">"#FF4081"</span>)</span><br></pre></td></tr></table></figure></li><li><p>修改Maupassant主题下的配置文件<br>themes/maupassant/_config.yml , 在widgets标签下增加aplaye ，修改如下：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">widgets:</span> <span class="comment">## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">aplayer</span> </span><br><span class="line"><span class="bullet">  -</span> <span class="string">search</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">category</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">tag</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">recent_posts</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">recent_comments</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">links</span></span><br></pre></td></tr></table></figure></li><li><p>编译博客<br>执行hexo g生成博客代码</p></li><li><p>本地部署<br>执行hexo s部署本地localhost:4000</p></li><li><p>服务器部署<br>  执行hexo d部署到github page</p></li><li><p>效果<br><img src="/img/aplayer.png" alt="Aplayer"></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Hexo的Maupassant主题下，为了使博客的功能更加完善，增加音乐播放模块，看了Maupassant主题作者的ISSU，发现并没有该功能的实现，不过从部分网友的折腾过程来看，使用Aplayer实现的效果是最好的。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://kangjun.online/categories/technology/"/>
+    
+    
+      <category term="Hexo" scheme="https://kangjun.online/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo主题Maupassant动态背景canvas-nest显示问题</title>
