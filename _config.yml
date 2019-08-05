@@ -57,6 +57,7 @@ index_generator:
 default_category: technology
 category_map:
         技术: technology
+        生活: life 
 tag_map:
 
 # Date / Time format
