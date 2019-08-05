@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kangjun.online/"/>
-  <updated>2019-05-27T15:14:50.471Z</updated>
+  <updated>2019-08-05T16:42:14.036Z</updated>
   <id>https://kangjun.online/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>闺女66天</title>
+    <link href="https://kangjun.online/life/life-my-daughter-66-days.html"/>
+    <id>https://kangjun.online/life/life-my-daughter-66-days.html</id>
+    <published>2019-08-05T16:13:34.000Z</published>
+    <updated>2019-08-05T16:42:14.036Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>闺女蕙出生有66天了，但是感觉过了很久一样，对于我和老婆来说，都是挺艰辛的。这或许印证了一句老话：养儿方知为母难。<br><a id="more"></a></p><p>最近，突然感觉压力好大，主要还是由于新房交付，开始月供的日子了。我真的成了他人口中的”月光族”。</p><p>在这个阶段，或许是人生的另一个重要的转折点。有压力固然是好事，但是并不能完全因为压力太大而自暴自弃；反而应该为自己的未来做一个更好的规划。</p><p>同时，时刻鞭策自己，应该承担起更多的责任，应该有一个坚定的方向，有一个让自己持之以恒的事业来提升和突破。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;闺女蕙出生有66天了，但是感觉过了很久一样，对于我和老婆来说，都是挺艰辛的。这或许印证了一句老话：养儿方知为母难。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="https://kangjun.online/categories/life/"/>
+    
+    
+      <category term="daughter" scheme="https://kangjun.online/tags/daughter/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo主题Maupassant侧边栏增加音乐Aplayer</title>
@@ -87,7 +109,7 @@
     <link href="https://kangjun.online/technology/hello-world.html"/>
     <id>https://kangjun.online/technology/hello-world.html</id>
     <published>2019-05-22T14:05:37.000Z</published>
-    <updated>2019-05-26T17:01:03.702Z</updated>
+    <updated>2019-08-05T16:25:59.779Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
