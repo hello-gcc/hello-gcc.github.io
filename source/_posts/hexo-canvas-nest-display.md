@@ -1,5 +1,5 @@
 ---
-title: Hexo主题Maupassant动态背景canvas-nest显示问题
+title: Hexo 之 主题Maupassant动态背景canvas-nest显示问题
 toc: true
 date: 2019-05-25 11:56:20
 categories: 

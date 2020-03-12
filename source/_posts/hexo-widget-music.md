@@ -1,5 +1,5 @@
 ---
-title: Hexo主题Maupassant侧边栏增加音乐Aplayer
+title: Hexo 之 主题Maupassant侧边栏增加音乐Aplayer
 toc: true
 date: 2019-05-27 22:20:08
 categories:
