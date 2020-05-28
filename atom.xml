@@ -87,7 +87,7 @@
     <link href="https://kangjun.online/technology/stm32-note-1.html"/>
     <id>https://kangjun.online/technology/stm32-note-1.html</id>
     <published>2019-05-24T14:05:37.000Z</published>
-    <updated>2020-03-11T10:04:24.461Z</updated>
+    <updated>2020-05-27T14:38:01.301Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>技术是不断更新的，但是经验是一点一滴积累的。经历多并不代表经验深厚，需要总结、积累、分享，能力才可以得到质的提升。<br><a id="more"></a></p><h3 id="履历"><a href="#履历" class="headerlink" title="履历"></a>履历</h3><p>从事嵌入式软件开发工作接近三年了，但是对于STM32的接触是从最近一份工作开始的。大概用了半年时间阅读项目中的源代码，并且将项目中的HAL编写的代码转换成寄存器版本的代码，算是对STM32简单的入门了解。</p><h3 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h3><p>最近，听说公司要搬迁了，考虑到家庭胡因素可能无法跟随公司一起搬迁。与此同时，自我审视了一番，发现自己有点儿偏离了嵌入式软件开发的方向了，瞬间有种恐惧来袭，毕竟我不是科班出生搞软件的，还是需要坚持一个方向，需要深耕，需要积累，这样才能够突破自己的技术高度，真正的拥有一技之长。</p><h3 id="近况"><a href="#近况" class="headerlink" title="近况"></a>近况</h3><p>近半年大部分的时间都花在WEB开发，包括服务器端的PHP、PYTHON编写，前端HTML+CSS的编写（其实就是拷贝再定制了）。</p><h3 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h3><p>近日，计划更加系统地学习一下STM32，一方面加深STM32的知识，另一方面从整体框架的视角上更加全面地对STM32有一个系统的认知。</p><h3 id="规划"><a href="#规划" class="headerlink" title="规划"></a>规划</h3><ul><li>选择Cotex-M3和Cotex-M4两种架构的STM32芯片两种STM32F103ZET6和STM32F407ZGT6</li><li>STM32官方开发软件Keil的使用</li><li>STM32时钟分频</li><li>STM32通信I2C、SPI、486、CAN、UART</li><li>STM32 DAC/ADC采样</li><li>STM32 RTOS移植</li></ul>]]></content>
     
