@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kangjun.online/"/>
-  <updated>2020-03-12T16:31:56.762Z</updated>
+  <updated>2020-05-28T15:43:38.570Z</updated>
   <id>https://kangjun.online/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>STM32学习笔记 之 STM32CubeIDE安装和基本功能介绍</title>
+    <link href="https://kangjun.online/technology/stm32-note-stm32cubeide-install.html"/>
+    <id>https://kangjun.online/technology/stm32-note-stm32cubeide-install.html</id>
+    <published>2020-05-27T14:57:29.000Z</published>
+    <updated>2020-05-28T15:43:38.570Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><p>凡事预则立，不预则废 ———— 《礼记·中庸》</p></blockquote><p>离上篇文章发布已经很久没有更新了，其实“预”了很久，Flag也“立”了很多个，但是呢，没有付诸行动。说多了就是掩饰，啥都不多说，直接开篇。<br><a id="more"></a></p><h3 id="STM32CubeIDE是个啥？"><a href="#STM32CubeIDE是个啥？" class="headerlink" title="STM32CubeIDE是个啥？"></a>STM32CubeIDE是个啥？</h3><ul><li>第一眼看到这个软件的名字，就马上想到了STM32CubeMX这个可视化的芯片参数配置工具，总感觉它俩之间有着千丝万缕的关系。其实，这俩还真有关系。</li><li>先来看看官方的解释：<ul><li>STM32CubeIDE is an all-in-one multi-OS development tool, which is part of the STM32Cube software ecosystem</li><li>这货属于STM32Cube软件生态中的一个多平台、高度集成的开发工具</li></ul></li><li>再来看看官方的图片：<br><img src="/img/stm32/stm32cubeide-install-01.jpg" alt></li><li>这下是不是看明白了？还不明白，再贴个图：<br><img src="/img/stm32/stm32cubeide-install-02.png" alt></li><li>这一行工具栏，怎么这么眼熟，这个不就是它么？<br><img src="/img/stm32/stm32cubeide-install-03.png" width="50%" height="50%"></li><li>开始懂了</li></ul><h3 id="STM32CubeIDE软件获取和安装"><a href="#STM32CubeIDE软件获取和安装" class="headerlink" title="STM32CubeIDE软件获取和安装"></a>STM32CubeIDE软件获取和安装</h3><ol><li>下载</li></ol><ul><li>支持系统：Windows、Linux、MacOS</li><li>官方链接：<a href="https://www.st.com/en/development-tools/stm32cubeide.html#get-software" target="_blank" rel="noopener">STM32CubeIDE</a></li></ul><ol start="2"><li>安装</li></ol><ul><li>这个就比较简单了，作为一个程序员，安装路径就不要用中文了吧…</li></ul><h3 id="STM32CubeIDE界面简介"><a href="#STM32CubeIDE界面简介" class="headerlink" title="STM32CubeIDE界面简介"></a>STM32CubeIDE界面简介</h3><ol><li>工程路径选择：启动软件后，选择一个路径作为Workspcace，然后就Launch如下图所示：<br><img src="/img/stm32/stm32cubeide-install-04.png" alt></li><li>工具栏介绍：如果经常使用eclipse开发C/C++程序，这个界面就非常熟悉了，较eclipse工具增加一个CubeMX配置插件<br><img src="/img/stm32/stm32cubeide-install-05.png" alt> </li><li>暂时就先简单介绍这么多，下次再记录工程创建和编译调试相关内容</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;凡事预则立，不预则废 ———— 《礼记·中庸》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;离上篇文章发布已经很久没有更新了，其实“预”了很久，Flag也“立”了很多个，但是呢，没有付诸行动。说多了就是掩饰，啥都不多说，直接开篇。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://kangjun.online/categories/technology/"/>
+    
+    
+      <category term="STM32" scheme="https://kangjun.online/tags/STM32/"/>
+    
+  </entry>
   
   <entry>
     <title>闺女66天</title>
