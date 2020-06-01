@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>STM32学习笔记 之 STM32CubeIDE工程创建和编译 | 文蕙俊</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.4.0/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-140849310-1','auto');ga('send','pageview');
+</script></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">STM32学习笔记 之 STM32CubeIDE工程创建和编译</h1><a id="logo" href="/.">文蕙俊</a><p class="description">为人夫 为人父</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/timeline/"><i class="fa fa-clock-o"> 时间轴</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">STM32学习笔记 之 STM32CubeIDE工程创建和编译</h1><div class="post-meta">May 31, 2020<span> | </span><span class="category"><a href="/categories/technology/">技术</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 589</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-hourglass-half"></i><span class="post-count"> 2</span><span class="post-meta-item-text"> 分钟</span></span></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#STM32CubeIDE-工程创建"><span class="toc-number">1.</span> <span class="toc-text">STM32CubeIDE 工程创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Type-A：新建工程"><span class="toc-number">1.1.</span> <span class="toc-text">Type A：新建工程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Type-B：通过CubeMX文件创建工程"><span class="toc-number">1.2.</span> <span class="toc-text">Type B：通过CubeMX文件创建工程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STM32CubeIDE-工程编译"><span class="toc-number">2.</span> <span class="toc-text">STM32CubeIDE 工程编译</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#工程简介"><span class="toc-number">2.1.</span> <span class="toc-text">工程简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编译环境配置和结果"><span class="toc-number">2.2.</span> <span class="toc-text">编译环境配置和结果</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后记"><span class="toc-number">3.</span> <span class="toc-text">后记</span></a></li></ol></div></div><div class="post-content"><p>上篇文章简单介绍了一下STM32CubeIDE工具及其安装，也看了下它的类eclipse界面。本文将介绍如何创建一个STM32工程和基本的操作，以及如何编译出一个可执行文件。</p>
+<a id="more"></a>
+<h3 id="STM32CubeIDE-工程创建"><a href="#STM32CubeIDE-工程创建" class="headerlink" title="STM32CubeIDE 工程创建"></a>STM32CubeIDE 工程创建</h3><h4 id="Type-A：新建工程"><a href="#Type-A：新建工程" class="headerlink" title="Type A：新建工程"></a>Type A：新建工程</h4><ul>
+<li>打开 File-&gt; New -&gt; STM32 Project<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/imgstm32cubeide_build_00.png" alt></li>
+<li>在搜索框中输入主控芯片的型号，可以在右侧查找到指定的MCU，点击Next<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/imgstm32cubeide_build_01.png" alt></li>
+<li>输入工程名，并且选择相应的编程语言、目标文件和使用的模板工程，点击Finish，这样就创建了一个STM32CubeMX文件<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/imgstm32cubeide_build_02.png" alt></li>
+<li>配置完工程下的CubeMX文件之后，选择Project Manager选项卡，配置生成相应的工程文件<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/imgstm32cubeide_build_03.png" alt></li>
+<li>配置时钟和相应的GPIO口<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_04.png" alt></li>
+<li>此时保存.ioc文件，提示是否生成代码，点击Yes，则生成工程代码<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_05.png" alt><br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_06.png" alt></li>
+</ul>
+<h4 id="Type-B：通过CubeMX文件创建工程"><a href="#Type-B：通过CubeMX文件创建工程" class="headerlink" title="Type B：通过CubeMX文件创建工程"></a>Type B：通过CubeMX文件创建工程</h4><ul>
+<li>如果已经有CubeMX生成的ioc文件，则可以打开 File -&gt; New -&gt; STM32 Project From STM32CubeMX .ioc File，相应的文件<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_07.png" alt></li>
+<li>打开指定的ioc文件，点击Finish，然后就是配置文件生成代码，同上述Type A方法类似，不再赘诉<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_08.png" alt></li>
+</ul>
+<h3 id="STM32CubeIDE-工程编译"><a href="#STM32CubeIDE-工程编译" class="headerlink" title="STM32CubeIDE 工程编译"></a>STM32CubeIDE 工程编译</h3><h4 id="工程简介"><a href="#工程简介" class="headerlink" title="工程简介"></a>工程简介</h4><ul>
+<li>工程创建后，生成了对应的代码，从上述的图片中可以看到工程中的主要几个文件夹：Includes、Core、Drivers已经ioc和ld文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Includes</td>
+<td>所有库的头文件</td>
+</tr>
+<tr>
+<td>Core</td>
+<td>用户编码文件和头文件</td>
+</tr>
+<tr>
+<td>Drivers</td>
+<td>CMSIS和HAL库文件和头文件</td>
+</tr>
+</tbody>
+</table>
+<h4 id="编译环境配置和结果"><a href="#编译环境配置和结果" class="headerlink" title="编译环境配置和结果"></a>编译环境配置和结果</h4><ul>
+<li>右键点击工程，选择Properties，打开选项卡，C/C++ Build –&gt; Settings进行编译相关配置<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_09.png" alt></li>
+<li>在Tool Settings选项卡下：<ul>
+<li>编译输出配置MCU Post build outputs，指定输出文件为hex和bin</li>
+<li>汇编配置MCU GCC Assembler</li>
+<li>编译配置MCU GCC Compiler，头文件，宏定义，优化等级等</li>
+<li>链接配置MCU GCC Linker，链接库等<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_10.png" alt></li>
+</ul>
+</li>
+<li>点击构建图标，编译当前工程<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_11.png" alt></li>
+<li>编译成功后，在工程浏览栏中，将会出现工程名相同的二进制文件和Debug文件夹，即为需要download到stm32f103c8t6开发板中的文件<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_12.png" alt></li>
+</ul>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><ul>
+<li>至此，STM32CubeIDE工程创建的基本步骤算完成了，我们生成了需要的可执行文件，接下来将会记录调试功能，以及非常棒的在线调试相关功能。</li>
+</ul>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Jun Kang</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/technology/stm32-note-stm32cubeide-build.html">https://kangjun.online/technology/stm32-note-stm32cubeide-build.html</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</li></ul></div><br><iframe src="/donate/?AliPayQR=/img/AliPayQR.png&amp;WeChatQR=/img/WeChatQR.png&amp;GitHub=null&amp;BTCQR=null&amp;BTCKEY=null&amp;PayPal=null" style="overflow-x:hidden; overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe><div class="tags"><a href="/tags/STM32/">STM32</a><a href="/tags/STM32CubeIDE/">STM32CubeIDE</a></div><div class="post-nav"><a class="next" href="/technology/stm32-note-stm32cubeide-install.html">STM32学习笔记 之 STM32CubeIDE安装和基本功能介绍</a></div><div id="container"></div><link rel="stylesheet" type="text/css" href="//unpkg.com/gitalk/dist/gitalk.css?v=0.0.0"><script type="text/javascript" src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js?v=0.0.0"></script><script type="text/javascript" src="//unpkg.com/gitalk/dist/gitalk.min.js?v=0.0.0"></script><script>var gitalk = new Gitalk({
+  clientID: '1cfa828bea668ef3119b',
+  clientSecret: 'dfcb8918ff85f8526fbad1523ccf8d58ce11dbca',
+  repo: 'hello-gcc.github.io',
+  owner: 'hello-gcc',
+  admin: ['hello-gcc'],
+  id: md5(location.pathname),
+  distractionFreeMode: false
+})
+gitalk.render('container')
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"><script type="text/javascript" src="/js/Aplayer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script><div class="aplayer" data-id="2578068117" data-server="netease" data-type="playlist" data-listmaxheight="98px" data-theme="#FF4081"></div></div><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="https://kangjun.online"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/technology/">技术</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">生活</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/daughter/" style="font-size: 15px;">daughter</a> <a href="/tags/STM32/" style="font-size: 15px;">STM32</a> <a href="/tags/STM32CubeIDE/" style="font-size: 15px;">STM32CubeIDE</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/technology/stm32-note-stm32cubeide-build.html">STM32学习笔记 之 STM32CubeIDE工程创建和编译</a></li><li class="post-list-item"><a class="post-list-link" href="/technology/stm32-note-stm32cubeide-install.html">STM32学习笔记 之 STM32CubeIDE安装和基本功能介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/life/life-my-daughter-66-days.html">闺女66天</a></li><li class="post-list-item"><a class="post-list-link" href="/technology/hexo-widget-music.html">Hexo 之 主题Maupassant侧边栏增加音乐Aplayer</a></li><li class="post-list-item"><a class="post-list-link" href="/technology/hexo-canvas-nest-display.html">Hexo 之 主题Maupassant动态背景canvas-nest显示问题</a></li><li class="post-list-item"><a class="post-list-link" href="/technology/stm32-note-1.html">STM32学习笔记 之 序言</a></li><li class="post-list-item"><a class="post-list-link" href="/technology/hello-world.html">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.v2ex.com/" title="V2EX" target="_blank">V2EX</a><ul></ul><a href="https://www.cnblogs.com/" title="博客园" target="_blank">博客园</a><ul></ul><a href="https://www.oschina.net/" title="开源中国" target="_blank">开源中国</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">文蕙俊.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css"><script type="text/javascript" color="100,100,100" opacity="0.5" zindex="-2" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

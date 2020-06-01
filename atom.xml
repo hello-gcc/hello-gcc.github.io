@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kangjun.online/"/>
-  <updated>2020-05-28T15:43:38.570Z</updated>
+  <updated>2020-06-01T16:51:00.940Z</updated>
   <id>https://kangjun.online/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>STM32学习笔记 之 STM32CubeIDE工程创建和编译</title>
+    <link href="https://kangjun.online/technology/stm32-note-stm32cubeide-build.html"/>
+    <id>https://kangjun.online/technology/stm32-note-stm32cubeide-build.html</id>
+    <published>2020-05-31T14:35:37.000Z</published>
+    <updated>2020-06-01T16:51:00.940Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>上篇文章简单介绍了一下STM32CubeIDE工具及其安装，也看了下它的类eclipse界面。本文将介绍如何创建一个STM32工程和基本的操作，以及如何编译出一个可执行文件。</p><a id="more"></a><h3 id="STM32CubeIDE-工程创建"><a href="#STM32CubeIDE-工程创建" class="headerlink" title="STM32CubeIDE 工程创建"></a>STM32CubeIDE 工程创建</h3><h4 id="Type-A：新建工程"><a href="#Type-A：新建工程" class="headerlink" title="Type A：新建工程"></a>Type A：新建工程</h4><ul><li>打开 File-&gt; New -&gt; STM32 Project<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/imgstm32cubeide_build_00.png" alt></li><li>在搜索框中输入主控芯片的型号，可以在右侧查找到指定的MCU，点击Next<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/imgstm32cubeide_build_01.png" alt></li><li>输入工程名，并且选择相应的编程语言、目标文件和使用的模板工程，点击Finish，这样就创建了一个STM32CubeMX文件<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/imgstm32cubeide_build_02.png" alt></li><li>配置完工程下的CubeMX文件之后，选择Project Manager选项卡，配置生成相应的工程文件<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/imgstm32cubeide_build_03.png" alt></li><li>配置时钟和相应的GPIO口<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_04.png" alt></li><li>此时保存.ioc文件，提示是否生成代码，点击Yes，则生成工程代码<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_05.png" alt><br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_06.png" alt></li></ul><h4 id="Type-B：通过CubeMX文件创建工程"><a href="#Type-B：通过CubeMX文件创建工程" class="headerlink" title="Type B：通过CubeMX文件创建工程"></a>Type B：通过CubeMX文件创建工程</h4><ul><li>如果已经有CubeMX生成的ioc文件，则可以打开 File -&gt; New -&gt; STM32 Project From STM32CubeMX .ioc File，相应的文件<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_07.png" alt></li><li>打开指定的ioc文件，点击Finish，然后就是配置文件生成代码，同上述Type A方法类似，不再赘诉<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_08.png" alt></li></ul><h3 id="STM32CubeIDE-工程编译"><a href="#STM32CubeIDE-工程编译" class="headerlink" title="STM32CubeIDE 工程编译"></a>STM32CubeIDE 工程编译</h3><h4 id="工程简介"><a href="#工程简介" class="headerlink" title="工程简介"></a>工程简介</h4><ul><li>工程创建后，生成了对应的代码，从上述的图片中可以看到工程中的主要几个文件夹：Includes、Core、Drivers已经ioc和ld文件</li></ul><table><thead><tr><th>Folder</th><th>Description</th></tr></thead><tbody><tr><td>Includes</td><td>所有库的头文件</td></tr><tr><td>Core</td><td>用户编码文件和头文件</td></tr><tr><td>Drivers</td><td>CMSIS和HAL库文件和头文件</td></tr></tbody></table><h4 id="编译环境配置和结果"><a href="#编译环境配置和结果" class="headerlink" title="编译环境配置和结果"></a>编译环境配置和结果</h4><ul><li>右键点击工程，选择Properties，打开选项卡，C/C++ Build –&gt; Settings进行编译相关配置<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_09.png" alt></li><li>在Tool Settings选项卡下：<ul><li>编译输出配置MCU Post build outputs，指定输出文件为hex和bin</li><li>汇编配置MCU GCC Assembler</li><li>编译配置MCU GCC Compiler，头文件，宏定义，优化等级等</li><li>链接配置MCU GCC Linker，链接库等<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_10.png" alt></li></ul></li><li>点击构建图标，编译当前工程<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_11.png" alt></li><li>编译成功后，在工程浏览栏中，将会出现工程名相同的二进制文件和Debug文件夹，即为需要download到stm32f103c8t6开发板中的文件<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_build_12.png" alt></li></ul><h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><ul><li>至此，STM32CubeIDE工程创建的基本步骤算完成了，我们生成了需要的可执行文件，接下来将会记录调试功能，以及非常棒的在线调试相关功能。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上篇文章简单介绍了一下STM32CubeIDE工具及其安装，也看了下它的类eclipse界面。本文将介绍如何创建一个STM32工程和基本的操作，以及如何编译出一个可执行文件。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://kangjun.online/categories/technology/"/>
+    
+    
+      <category term="STM32" scheme="https://kangjun.online/tags/STM32/"/>
+    
+      <category term="STM32CubeIDE" scheme="https://kangjun.online/tags/STM32CubeIDE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>STM32学习笔记 之 STM32CubeIDE安装和基本功能介绍</title>
     <link href="https://kangjun.online/technology/stm32-note-stm32cubeide-install.html"/>
     <id>https://kangjun.online/technology/stm32-note-stm32cubeide-install.html</id>
     <published>2020-05-27T14:57:29.000Z</published>
-    <updated>2020-05-28T15:43:38.570Z</updated>
+    <updated>2020-05-31T14:39:31.675Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote><p>凡事预则立，不预则废 ———— 《礼记·中庸》</p></blockquote><p>离上篇文章发布已经很久没有更新了，其实“预”了很久，Flag也“立”了很多个，但是呢，没有付诸行动。说多了就是掩饰，啥都不多说，直接开篇。<br><a id="more"></a></p><h3 id="STM32CubeIDE是个啥？"><a href="#STM32CubeIDE是个啥？" class="headerlink" title="STM32CubeIDE是个啥？"></a>STM32CubeIDE是个啥？</h3><ul><li>第一眼看到这个软件的名字，就马上想到了STM32CubeMX这个可视化的芯片参数配置工具，总感觉它俩之间有着千丝万缕的关系。其实，这俩还真有关系。</li><li>先来看看官方的解释：<ul><li>STM32CubeIDE is an all-in-one multi-OS development tool, which is part of the STM32Cube software ecosystem</li><li>这货属于STM32Cube软件生态中的一个多平台、高度集成的开发工具</li></ul></li><li>再来看看官方的图片：<br><img src="/img/stm32/stm32cubeide-install-01.jpg" alt></li><li>这下是不是看明白了？还不明白，再贴个图：<br><img src="/img/stm32/stm32cubeide-install-02.png" alt></li><li>这一行工具栏，怎么这么眼熟，这个不就是它么？<br><img src="/img/stm32/stm32cubeide-install-03.png" width="50%" height="50%"></li><li>开始懂了</li></ul><h3 id="STM32CubeIDE软件获取和安装"><a href="#STM32CubeIDE软件获取和安装" class="headerlink" title="STM32CubeIDE软件获取和安装"></a>STM32CubeIDE软件获取和安装</h3><ol><li>下载</li></ol><ul><li>支持系统：Windows、Linux、MacOS</li><li>官方链接：<a href="https://www.st.com/en/development-tools/stm32cubeide.html#get-software" target="_blank" rel="noopener">STM32CubeIDE</a></li></ul><ol start="2"><li>安装</li></ol><ul><li>这个就比较简单了，作为一个程序员，安装路径就不要用中文了吧…</li></ul><h3 id="STM32CubeIDE界面简介"><a href="#STM32CubeIDE界面简介" class="headerlink" title="STM32CubeIDE界面简介"></a>STM32CubeIDE界面简介</h3><ol><li>工程路径选择：启动软件后，选择一个路径作为Workspcace，然后就Launch如下图所示：<br><img src="/img/stm32/stm32cubeide-install-04.png" alt></li><li>工具栏介绍：如果经常使用eclipse开发C/C++程序，这个界面就非常熟悉了，较eclipse工具增加一个CubeMX配置插件<br><img src="/img/stm32/stm32cubeide-install-05.png" alt> </li><li>暂时就先简单介绍这么多，下次再记录工程创建和编译调试相关内容</li></ol>]]></content>
     
@@ -38,6 +62,8 @@
     
     
       <category term="STM32" scheme="https://kangjun.online/tags/STM32/"/>
+    
+      <category term="STM32CubeIDE" scheme="https://kangjun.online/tags/STM32CubeIDE/"/>
     
   </entry>
   
