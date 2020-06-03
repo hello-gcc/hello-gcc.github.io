@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kangjun.online/"/>
-  <updated>2020-06-01T16:51:00.940Z</updated>
+  <updated>2020-06-03T15:15:17.042Z</updated>
   <id>https://kangjun.online/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>STM32学习笔记 之 STM32CubeIDE调试</title>
+    <link href="https://kangjun.online/technology/stm32-note-stm32cubeide-debug.html"/>
+    <id>https://kangjun.online/technology/stm32-note-stm32cubeide-debug.html</id>
+    <published>2020-06-03T13:53:50.000Z</published>
+    <updated>2020-06-03T15:15:17.042Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>接上篇工程编译和构建，本文记录如何使用STM32CubeIDE的在线调试功能，以及调试过程中相关的工具使用。</p><a id="more"></a><h3 id="调试配置"><a href="#调试配置" class="headerlink" title="调试配置"></a>调试配置</h3><ul><li>点击debug配置工具，选择Debug Configuration<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_debug_00.png" alt></li><li>新建调试，STM32 Cortex-M C/C++ Application<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_debug_01.png" alt></li><li>调试配置文件路径<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_debug_02.png" alt></li><li>配置调试器<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_debug_03.png" alt></li></ul><h3 id="在线调试"><a href="#在线调试" class="headerlink" title="在线调试"></a>在线调试</h3><ul><li>点击Debug就可以开始调试了，此时，程序进入main函数，并且会停在入口的init函数<code>HAL_Init()</code></li></ul><h3 id="调试工具"><a href="#调试工具" class="headerlink" title="调试工具"></a>调试工具</h3><ul><li>在调试过程中，有非常多的工具可以使用，为我们调试程序带来便捷，并且在出现异常退出或者段错误时，调试窗口可以给出出错前调用的函数，非常实用的功能<br><img src="https://cdn.jsdelivr.net/gh/hello-gcc/blog_pic_bed/stm32cubeide_debug_04.png" alt></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;接上篇工程编译和构建，本文记录如何使用STM32CubeIDE的在线调试功能，以及调试过程中相关的工具使用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://kangjun.online/categories/technology/"/>
+    
+    
+      <category term="STM32" scheme="https://kangjun.online/tags/STM32/"/>
+    
+      <category term="STM32CubeIDE" scheme="https://kangjun.online/tags/STM32CubeIDE/"/>
+    
+  </entry>
   
   <entry>
     <title>STM32学习笔记 之 STM32CubeIDE工程创建和编译</title>
